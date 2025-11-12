@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenGuard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --brand-green: #2d6a4f;
+      --brand-light: #d8f3dc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      padding: 3rem;
+      background: radial-gradient(circle at top, var(--brand-light), #f8f9fa);
+      color: #1b1b1b;
+    }
+
+    .intro-card {
+      max-width: 540px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      box-shadow: 0 20px 50px rgba(45, 106, 79, 0.15);
+      border: 1px solid rgba(45, 106, 79, 0.2);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--brand-green);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.9rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(45, 106, 79, 0.1);
+      color: var(--brand-green);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.4rem;
+      border-radius: 1rem;
+      background: var(--brand-green);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(45, 106, 79, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <main class="intro-card">
+    <span class="pill">GreenGuard</span>
+    <h1>Building a healthier material future.</h1>
+    <p>
+      Welcome to the early build of the GreenGuard automation site. This page is a
+      placeholder while we design the data visuals, dashboards, and validation
+      tools for greener material qualification.
+    </p>
+    <a class="cta" href="https://github.com/Thue-T/GreenGuard-website">View on GitHub</a>
+  </main>
+</body>
+</html>
