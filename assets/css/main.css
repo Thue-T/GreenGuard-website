@@ -4191,8 +4191,26 @@ section,
   transform-box: fill-box;
 }
 
-.milestone:hover {
-  transform: scale(1.12);
+.milestone circle {
+  fill: #fff;
+  transition: fill 0.2s ease, stroke-width 0.2s ease;
+}
+
+.milestone.active circle,
+.milestone:hover circle {
+  fill: var(--layer);
+  stroke-width: 3.5;
+}
+
+.connector {
+  stroke: #4A5568;
+  stroke-width: 2;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.milestone.active .connector {
+  opacity: 1;
 }
 
 .ms-date {
@@ -4206,7 +4224,18 @@ section,
   fill: #4A5568;
 }
 
-svg text {
+.ms-label-desktop {
+  display: block;
+}
+
+.ms-label-mobile {
+  display: none;
+  fill: #2D3748;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+svg.gg-roadmap-svg text {
   font-family: 'Inter', sans-serif;
 }
 
@@ -4220,12 +4249,12 @@ svg text {
   padding: 18px 20px;
   transition: opacity 0.25s ease, transform 0.25s ease;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(10px) translateX(-5px) scale(0.97);
 }
 
 .roadmap-detail-box.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) translateX(0) scale(1);
 }
 
 .roadmap-detail-inner h5 {
@@ -4236,12 +4265,33 @@ svg text {
   color: color-mix(in srgb, var(--default-color), transparent 15%);
 }
 
-.milestone .connector {
-  transition: opacity 0.2s ease;
+@media (max-width: 767px) {
+  .ms-label-desktop {
+    display: none;
+  }
+
+  .ms-label-mobile {
+    display: block;
+    font-size: 16px;
+  }
+
+  .gg-roadmap-svg circle {
+    r: 22;
+  }
+
+  .gg-roadmap-svg .connector {
+    stroke-width: 3;
+  }
 }
 
-.milestone.active .connector {
-  opacity: 1;
+@media (min-width: 768px) {
+  .ms-label-desktop {
+    display: block;
+  }
+
+  .ms-label-mobile {
+    display: none;
+  }
 }
 
 .support-logo-card:hover {
