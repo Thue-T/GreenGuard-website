@@ -4180,6 +4180,34 @@ section,
   padding: 20px;
 }
 
+.gg-roadmap-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.milestone {
+  transition: 0.25s ease;
+}
+
+.milestone:hover {
+  transform: scale(1.12);
+}
+
+.ms-date {
+  font-size: 14px;
+  fill: #2D3748;
+  font-weight: 600;
+}
+
+.ms-title {
+  font-size: 13px;
+  fill: #4A5568;
+}
+
+svg text {
+  font-family: 'Inter', sans-serif;
+}
+
 .support-logo-card:hover {
   transform: scale(1.08);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);

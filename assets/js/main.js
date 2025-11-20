@@ -208,4 +208,16 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.milestone').forEach((el) => {
+      el.addEventListener('click', () => {
+        const id = el.id.replace('ms', '');
+        const modal = document.getElementById('modal' + id);
+        if (modal) {
+          new bootstrap.Modal(modal).show();
+        }
+      });
+    });
+  });
+
 })();
