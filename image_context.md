@@ -29,6 +29,30 @@ Description: Timeline from Q4 2025 to Q4 2027 showing:\
 - Market launch\
 \
 -------------------------------------------------------------------\
+SUPPORT LOGOS (folder: assets/img/support/)\
+-------------------------------------------------------------------\
+\
+support-odense-robotics-logo_1.0.png\
+Description: Logo for Odense Robotics. Used in partner/supporter section.\
+Link: https://www.odenserobotics.dk/\
+\
+support-ESA-logo-1.1.png\
+Description: ESA BIC / Space Ventures Denmark logo. Used in partner/supporter section.\
+Link: https://www.spaceventures.dk/esabic\
+\
+support-Innovationsfonden_Logo-1.0.png\
+Description: Innovationsfonden logo. Used in partner/supporter section.\
+Link: https://innovationsfonden.dk/da\
+\
+support-AgriFoodTure_logo-1.0.png\
+Description: AgriFoodTure logo. Used in partner/supporter section.\
+Link: https://agrifoodture.com/\
+\
+support-mikrolegat-logo-1.0.jpg\
+Description: Mikrolegat (FFE-fonden) logo. Used in partner/supporter section.\
+Link: https://mikrolegat.ffefonden.dk/\
+\
+-------------------------------------------------------------------\
 TEAM IMAGES (folder: assets/img/person/)\
 -------------------------------------------------------------------\
 \

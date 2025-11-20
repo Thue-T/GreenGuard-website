@@ -4146,6 +4146,33 @@ section,
   box-shadow: 0 15px 35px color-mix(in srgb, var(--accent-color), transparent 65%);
 }
 
+/*--------------------------------------------------------------
+# Partners Logo Cards
+--------------------------------------------------------------*/
+.partner-logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 12px;
+  padding: 24px 18px;
+  height: 120px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.partner-logo-card img {
+  max-height: 64px;
+  object-fit: contain;
+}
+
+.partner-logo-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px color-mix(in srgb, var(--accent-color), transparent 85%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 50%);
+  background: #fff;
+}
+
 @media (max-width: 992px) {
   .error-404 {
     padding: 80px 0;
