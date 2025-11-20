@@ -209,26 +209,132 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
   document.addEventListener('DOMContentLoaded', () => {
+    const svg = document.querySelector('.gg-roadmap-svg');
+    const container = document.querySelector('.gg-roadmap-container');
     const milestones = document.querySelectorAll('.gg-roadmap-container .milestone');
     const detailBox = document.getElementById('roadmap-detail-box');
     const detailTitle = document.getElementById('roadmap-detail-title');
     const detailText = document.getElementById('roadmap-detail-text');
+    const follow = document.querySelector('.roadmap-follow');
+
+    const connectorOffsets = [-50, -10, 25, 60, -35, 30];
+
+    function clientToSvgCoords(svgEl, x, y) {
+      const pt = svgEl.createSVGPoint();
+      pt.x = x;
+      pt.y = y;
+      return pt.matrixTransform(svgEl.getScreenCTM().inverse());
+    }
+
+    function resetRoadmap() {
+      milestones.forEach(item => {
+        item.classList.remove('active');
+        const connector = item.querySelector('.connector');
+        if (connector) {
+          connector.setAttribute('opacity', '0');
+          connector.setAttribute('stroke-dashoffset', '0');
+          connector.setAttribute('stroke-dasharray', '0');
+        }
+      });
+      if (detailBox) {
+        detailBox.classList.add('d-none');
+        detailBox.classList.remove('active');
+        detailBox.style.removeProperty('--roadmap-tx');
+      }
+      if (container) container.classList.remove('roadmap-active');
+      if (follow) follow.style.marginTop = '';
+    }
+
+    function updateConnector(ms, connector, targetX, targetY) {
+      const circle = ms.querySelector('circle');
+      if (!circle || !connector || !svg) return;
+
+      const circleRect = circle.getBoundingClientRect();
+      const circleCenterX = circleRect.left + circleRect.width / 2;
+      const circleCenterY = circleRect.top + circleRect.height / 2;
+      const svgStart = clientToSvgCoords(svg, circleCenterX, circleCenterY);
+      const svgEnd = clientToSvgCoords(svg, targetX, targetY);
+
+      connector.setAttribute('x1', svgStart.x);
+      connector.setAttribute('y1', svgStart.y);
+      connector.setAttribute('x2', svgEnd.x);
+      connector.setAttribute('y2', svgEnd.y);
+
+      const dx = svgEnd.x - svgStart.x;
+      const dy = svgEnd.y - svgStart.y;
+      const length = Math.sqrt(dx * dx + dy * dy);
+      connector.setAttribute('stroke-dasharray', length.toString());
+      connector.setAttribute('stroke-dashoffset', length.toString());
+      connector.setAttribute('opacity', '1');
+
+      requestAnimationFrame(() => {
+        connector.setAttribute('stroke-dashoffset', '0');
+      });
+    }
 
     function activateMilestone(ms) {
+      const index = Array.from(milestones).indexOf(ms);
       milestones.forEach(item => item.classList.remove('active'));
       ms.classList.add('active');
+      if (!detailTitle || !detailText || !detailBox || !svg) return;
 
-      if (detailTitle && detailText && detailBox) {
-        detailTitle.textContent = ms.getAttribute('data-title') || '';
-        detailText.textContent = ms.getAttribute('data-text') || '';
-        detailBox.classList.remove('d-none');
-        detailBox.classList.add('active');
-      }
+      detailTitle.textContent = ms.getAttribute('data-title') || '';
+      detailText.textContent = ms.getAttribute('data-text') || '';
+      detailBox.classList.remove('d-none');
+
+      detailBox.classList.remove('active');
+      detailBox.style.visibility = 'hidden';
+      detailBox.style.opacity = '0';
+
+      requestAnimationFrame(() => {
+        const boxRect = detailBox.getBoundingClientRect();
+        const containerRect = container ? container.getBoundingClientRect() : svg.getBoundingClientRect();
+        const boxCenterX = boxRect.left + boxRect.width / 2;
+        const boxCenterY = boxRect.top + boxRect.height / 2 - 4;
+
+        const circle = ms.querySelector('circle');
+        const circleRect = circle ? circle.getBoundingClientRect() : null;
+        const circleCenterX = circleRect ? circleRect.left + circleRect.width / 2 : boxCenterX;
+
+        const relCenterX = circleCenterX - containerRect.left;
+        const desiredTx = relCenterX - (boxRect.width / 2) - (boxRect.left - containerRect.left);
+        detailBox.style.setProperty('--roadmap-tx', `${desiredTx}px`);
+
+        const offsetX = (connectorOffsets[index] || 0);
+        const targetX = boxCenterX + offsetX;
+        const targetY = boxCenterY;
+
+        const connector = ms.querySelector('.connector');
+        if (connector) {
+          updateConnector(ms, connector, targetX, targetY);
+        }
+
+        if (container) container.classList.add('roadmap-active');
+        if (follow) follow.style.marginTop = '48px';
+
+        requestAnimationFrame(() => {
+          detailBox.style.visibility = 'visible';
+          detailBox.classList.add('active');
+        });
+      });
     }
 
     milestones.forEach(ms => {
-      ms.addEventListener('mouseenter', () => activateMilestone(ms));
-      ms.addEventListener('click', () => activateMilestone(ms));
+      const circle = ms.querySelector('circle');
+      if (!circle) return;
+      circle.addEventListener('mouseenter', () => activateMilestone(ms));
+      circle.addEventListener('click', () => activateMilestone(ms));
+    });
+
+    if (svg) {
+      svg.addEventListener('mouseleave', () => resetRoadmap());
+    }
+
+    document.addEventListener('pointerdown', (e) => {
+      if (!container) return;
+      if (!container.contains(e.target)) {
+        resetRoadmap();
+      }
     });
   });
 

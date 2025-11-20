@@ -4237,6 +4237,7 @@ section,
 
 svg.gg-roadmap-svg text {
   font-family: 'Inter', sans-serif;
+  pointer-events: none;
 }
 
 .roadmap-detail-box {
@@ -4245,16 +4246,17 @@ svg.gg-roadmap-svg text {
   background: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
   border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
   padding: 18px 20px;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition: opacity 0.55s cubic-bezier(0.25, 0.9, 0.25, 1.0), transform 0.55s cubic-bezier(0.25, 0.9, 0.25, 1.0);
   opacity: 0;
-  transform: translateY(10px) translateX(-5px) scale(0.97);
+  transform: translateY(12px) translateX(-5px) scale(0.35);
+  transform-origin: center top;
 }
 
 .roadmap-detail-box.active {
   opacity: 1;
-  transform: translateY(0) translateX(0) scale(1);
+  transform: translateY(0) translateX(var(--roadmap-tx, 0px)) scale(1);
 }
 
 .roadmap-detail-inner h5 {
@@ -4282,6 +4284,28 @@ svg.gg-roadmap-svg text {
   .gg-roadmap-svg .connector {
     stroke-width: 3;
   }
+}
+
+@media (min-width: 768px) {
+  .ms-label-desktop {
+    display: block;
+  }
+
+  .ms-label-mobile {
+    display: none;
+  }
+}
+
+.roadmap-follow {
+  transition: margin-top 0.35s ease;
+}
+
+.gg-roadmap-container.roadmap-active {
+  margin-bottom: 32px;
+}
+
+.gg-roadmap-container.roadmap-active + .roadmap-follow {
+  margin-top: 48px;
 }
 
 @media (min-width: 768px) {
