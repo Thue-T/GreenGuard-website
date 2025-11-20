@@ -4147,30 +4147,43 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Partners Logo Cards
+# Support Logo Cards
 --------------------------------------------------------------*/
-.partner-logo-card {
+.support-logo-card {
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fff;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-  border-radius: 12px;
-  padding: 24px 18px;
-  height: 120px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border-radius: 14px;
+  padding: 20px;
+  height: 140px;
+  max-width: 100%;
+  margin: 0 auto;
+  transition: all 0.25s ease;
+  cursor: pointer;
 }
 
-.partner-logo-card img {
-  max-height: 64px;
+.support-logo-card img {
+  max-height: 80px;
+  width: 100%;
   object-fit: contain;
 }
 
-.partner-logo-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px color-mix(in srgb, var(--accent-color), transparent 85%);
-  border-color: color-mix(in srgb, var(--accent-color), transparent 50%);
-  background: #fff;
+.support-logo-lg {
+  max-width: 220px;
+}
+
+.support-logo-sm {
+  max-width: 160px;
+  height: 120px;
+  padding: 18px;
+}
+
+.support-logo-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 55%);
 }
 
 @media (max-width: 992px) {
