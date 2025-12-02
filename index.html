@@ -9,8 +9,9 @@
   <meta name="keywords" content="GreenGuard Automation, laser weed control, sustainable farming, computer vision agriculture">
 
   <!-- Favicons -->
-  <link href="assets/img/brand/GGA_Logo-250.png" rel="icon">
-  <link href="assets/img/brand/GGA_Logo-500.png" rel="apple-touch-icon">
+  <link rel="icon" type="image/svg+xml" href="assets/img/brand/GGA_Logo-1.0.svg">
+  <link rel="icon" href="assets/img/brand/GGA_Logo-250-1.0.png">
+  <link href="assets/img/brand/GGA_Logo-500-1.0.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -42,19 +43,21 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/brand/GGA_Logo-500.png" alt="PNG logo 500x500px - used on homepage navigation top-left">
+        <picture>
+          <source srcset="assets/img/brand/GGA_Logo-1.0.svg" type="image/svg+xml">
+          <img src="assets/img/brand/GGA_Logo-500-1.0.png" alt="GreenGuard Automation logo" class="img-fluid">
+        </picture>
         <h1 class="sitename">GreenGuard Automation</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#problem" class="active">Problem</a></li>
-          <li><a href="#loesning">Løsning</a></li>
-          <li><a href="#hvorfor-os">Hvorfor os</a></li>
+          <li><a href="#mission" class="active">Mission</a></li>
           <li><a href="#projekter">Projekter</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="#partnerskab">Partnerskab</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="#partnerskab">Partnerskab</a></li>
+          
           <!--
           <li class="dropdown"><a href="#"><span>Mere</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -91,43 +94,15 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="hero-content">
-              <h1 data-aos="fade-up" data-aos-delay="200">Laserbaseret ukrudtsbekæmpelse uden kemi eller manuel arbejdskraft</h1>
-              <p data-aos="fade-up" data-aos-delay="300">GreenGuard Automation udvikler et traktormonteret lasersystem, guidet af selv-superviseret computer vision. Vi fjerner ukrudt med 98%+ præcision, beskytter grundvandet, og hjælper økologiske landmænd med at sikre udbytte til lavere omkostning.</p>
+              <h1 data-aos="fade-up" data-aos-delay="200">Kemifri præcisionsukrudtsbekæmpelse</h1>
+              <p data-aos="fade-up" data-aos-delay="300">Vi gør det muligt for landmænd at dyrke mere bæredygtigt og langt mere omkostningseffektivt.</p>
+              <div class="d-flex gap-2 flex-wrap my-3" data-aos="fade-up" data-aos-delay="350">
+                <span class="badge rounded-pill px-3 py-2" style="background:#e1e3de;color:#000;">Kemifri</span>
+                <span class="badge rounded-pill px-3 py-2" style="background:#e1e3de;color:#000;">Høj præcision</span>
+                <span class="badge rounded-pill px-3 py-2" style="background:#e1e3de;color:#000;">Lavere omkostninger</span>
+              </div>
               <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
                 <a href="#kontakt" class="btn-primary">Kontakt os</a>
-                <a href="#loesning" class="btn-secondary">
-                  <i class="bi bi-arrow-right-circle"></i>
-                  Se løsningen
-                </a>
-              </div>
-              <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
-                <div class="stat-item">
-                  <div class="stat-number">&gt;30%</div>
-                  <div class="stat-label">Udbyttetab forårsaget af ukrudt</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">98%+</div>
-                  <div class="stat-label">Præcision i ukrudtsdetektion</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">~30k DKK/ha</div>
-                  <div class="stat-label">Årlig manuel omkostning for økologer</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
-              <img src="assets/img/portfolio/laser-traktor.png" alt="Traktor med laserbaseret, kemifri ukrudtsbekæmpelse fra GreenGuard" class="img-fluid">
-              <div class="floating-card" data-aos="zoom-in" data-aos-delay="600">
-                <div class="card-icon">
-                  <i class="bi bi-graph-up-arrow"></i>
-                </div>
-                <div class="card-content">
-                  <h5>Betaler sig selv tilbage</h5>
-                  <div class="growth-percentage">~2 år</div>
-                </div>
               </div>
             </div>
           </div>
@@ -137,208 +112,37 @@
 
     </section><!-- /Hero Section -->
 
-    <!-- Problem Section -->
-    <section id="problem" class="about section">
-
-      <!-- Section Title -->
+    <!-- Mission Section -->
+    <section id="mission" class="why-us section">
       <div class="container section-title" data-aos="fade-up">
-        <span class="subtitle">Problem</span>
-        <h2>Ukrudt koster udbytte, arbejdskraft og miljø</h2>
-        <p>Ukrudt reducerer udbyttet med over 30%, og økologiske landmænd kan miste op til 50% uden effektiv bekæmpelse. Pesticider forurener grundvandet, og alternativer er dyre.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row align-items-center">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <div class="content">
-              <h2>Økologer rammes hårdest</h2>
-              <p class="lead">Ukrudt reducerer udbyttet med mere end 30%, og økologer kan tabe op til 50%. Pesticider forurener miljøet, og manuelle løsninger er både dyre og svære at bemande.</p>
-
-              <p>Organiske landmænd bruger omkring 30k DKK per hektar årligt på manuel lugning, og alternativer er ofte dyre eller komplekse. Samtidig kan mekaniske løsninger skade jordens struktur og frigive CO₂.</p>
-
-              <p>Der er brug for en skånsom, kemifri løsning, der kan levere høj præcision uden at kompromittere afgrøder og jordkvalitet.</p>
-
-              <div class="stats-row">
-                <div class="stat-item">
-                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"></div>
-                  <div class="stat-label">Op til 50% udbyttetab i økologien</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1"></div>
-                  <div class="stat-label">&gt;30% udbyttetab uden effektiv bekæmpelse</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="30000" data-purecounter-duration="1"></div>
-                  <div class="stat-label">DKK/ha årlig manuel lugning (økologer)</div>
-                </div>
-              </div>
-
-              <div class="cta-section">
-                <a href="#loesning" class="btn-outline">Se løsningen</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-            <div class="image-wrapper">
-              <img src="assets/img/about/about-square-12.webp" alt="About us" class="img-fluid">
-              <div class="floating-card" data-aos="zoom-in" data-aos-delay="500">
-                <div class="card-content">
-                  <div class="icon">
-                    <i class="bi bi-award"></i>
-                  </div>
-                  <div class="text">
-                    <h4>Award Winning</h4>
-                    <p>Recognized for excellence in our industry</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <span class="subtitle">Mission</span>
+        <h2>Mission</h2>
       </div>
 
-    </section><!-- /About Section -->
-
-    <!-- Løsning Section -->
-    <section id="loesning" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span class="subtitle">Løsning</span>
-        <h2>Laserbaseret ukrudtsbekæmpelse</h2>
-        <p>Traktormonteret lasersystem guidet af selv-superviseret computer vision. Ingen kemi, ingen manuel lugning – præcision og bæredygtighed i én løsning.</p>
-        <!-- <img src="assets/img/solution/solution-overview.png" alt="Visualisering af GreenGuards lasersystem" class="img-fluid mt-3"> -->
-      </div><!-- End Section Title -->
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4 text-center mb-4">
+          <div class="col-md-4">
+            <div class="mb-2"><i class="bi bi-leaf" style="color:#e1e3de; font-size: 32px;"></i></div>
+            <div class="h4 mb-1">&gt;30%</div>
+            <p class="mb-0">Udbyttetab forårsaget af ukrudt</p>
+          </div>
+          <div class="col-md-4">
+            <div class="mb-2"><i class="bi bi-bullseye" style="color:#e1e3de; font-size: 32px;"></i></div>
+            <div class="h4 mb-1">98%+</div>
+            <p class="mb-0">Præcision i ukrudtsdetektion</p>
+          </div>
+          <div class="col-md-4">
+            <div class="mb-2"><i class="bi bi-cash-stack" style="color:#e1e3de; font-size: 32px;"></i></div>
+            <div class="h4 mb-1">~30k DKK/ha</div>
+            <p class="mb-0">Årlig manuel omkostning for økologer</p>
+          </div>
+        </div>
 
         <div class="row justify-content-center mb-4">
           <div class="col-lg-10 text-center">
-            <p class="lead">Laserbaseret ukrudtsbekæmpelse uden kemi, uden manuel arbejdskraft og uden at forstyrre jorden. Traktormonteret løsning med selv-superviseret computer vision, der leverer 98%+ præcision i realtid.</p>
-          </div>
-        </div>
-
-        <div class="row gy-5">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-graph-up-arrow"></i>
-              </div>
-              <h3>Laserbaseret ukrudtsfjernelse</h3>
-              <p>Eliminerer ukrudt med præcisionslasere uden kemi og uden jordforstyrrelse. Skånsom for afgrøderne og grundvandet.</p>
-              <a href="service-details.html" class="service-link">
-                Learn More <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-palette"></i>
-              </div>
-              <h3>Computer vision i realtid</h3>
-              <p>Selv-superviseret billedgenkendelse med 98%+ præcision uden annoterede datasæt. Finder ukrudt mellem rækkerne i realtid.</p>
-              <a href="service-details.html" class="service-link">
-                Learn More <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-code-slash"></i>
-              </div>
-              <h3>Traktormonteret integration</h3>
-              <p>Installeres på eksisterende traktorer og er klar til elektrificering. Ingen manuel lugning; arbejdet klares autonomt mellem rækkerne.</p>
-              <a href="service-details.html" class="service-link">
-                Learn More <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-megaphone"></i>
-              </div>
-              <h3>Data &amp; rapportering</h3>
-              <p>Markdata og rapportering, der dokumenterer kemifri drift, reducerede arbejdsomkostninger og payback omkring 2 år.</p>
-              <a href="service-details.html" class="service-link">
-                Learn More <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-people"></i>
-              </div>
-              <h3>Sikkerhed og optik</h3>
-              <p>Komplekst optisk design og proprietær laserstyring beskytter afgrøder og leverer stabil effekt i marken.</p>
-              <a href="service-details.html" class="service-link">
-                Learn More <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-bar-chart"></i>
-              </div>
-              <h3>Pilotprojekter &amp; support</h3>
-              <p>Prototype TRL4 Q4 2025, feltstest Q2 2026 og pilots Q3 2026. Support til opsætning, drift og skalering.</p>
-              <a href="service-details.html" class="service-link">
-                Learn More <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div><!-- End Service Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Hvorfor os Section -->
-    <section id="hvorfor-os" class="why-us section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span class="subtitle">Hvorfor os</span>
-        <h2>Hvorfor GreenGuard</h2>
-        <p>GreenGuard kombinerer dyb teknisk viden, stærke partnere og et klart roadmap. Teamet har den rette faglighed og netværk til at bringe løsningen på markedet.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row align-items-center g-4 mb-5">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <div class="content">
-              <h2>Tidslinje mod markedet</h2>
-              <p>GreenGuard følger en klar roadmap fra prototype til skalering:</p>
-              <ul class="list-unstyled">
-                <li><strong>Q4 2025:</strong> TRL4 – første fuldt funktionelle prototype (laser + vision) klar til test.</li>
-                <li><strong>Q2 2026:</strong> Feltforsøg hos udvalgte landmænd, validering af performance i marken.</li>
-                <li><strong>Q3 2026:</strong> Større pilotprojekter med flere partnere og forskellige afgrøder.</li>
-                <li><strong>Q4 2026:</strong> Investor- og skaleringstrin, fokus på produktion og serieopbygning.</li>
-                <li><strong>Q2 2027:</strong> Kommercialisering og de første solgte enheder.</li>
-                <li><strong>Q4 2027:</strong> Skalering på tværs af Nordeuropa.</li>
-              </ul>
-              <p>Teamet har de nødvendige kompetencer, partnerskaber og dataadgang til at komme hurtigt fra prototype til marked.</p>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-            <div class="image-wrapper text-center">
-              <img src="assets/img/mission/mission-timeline-1.0.jpg" class="img-fluid" alt="GreenGuard mission tidslinje fra prototype til marked">
-            </div>
+            <p class="lead mb-3">Vi udvikler næste generation af kemifri, præcis og omkostningseffektiv ukrudtsbekæmpelse til højværdiafgrøder. GreenGuard drives af et kompromisløst fokus på eksekvering, teknologisk innovation og hurtig iteration mod et markedsklart produkt.</p>
+            <p class="mb-1">Præcision gennem avanceret vision og laserintegration.</p>
+            <p class="mb-0">Hurtig udvikling, højt ambitionsniveau og dyb teknisk forståelse.</p>
           </div>
         </div>
 
@@ -403,92 +207,95 @@
             </div>
           </div>
         </div>
-
-        <div class="roadmap-follow row align-items-center g-4">
-          <div class="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-delay="200">
-            <div class="image-wrapper text-center">
-              <img src="assets/img/mission/mission-market-1.0.jpg" class="img-fluid" alt="Grafisk illustration af TAM/SAM/SOM for markedet for ukrudtsbekæmpelse">
-            </div>
-          </div>
-          <div class="col-lg-6 order-lg-1" data-aos="fade-right" data-aos-delay="300">
-            <div class="content">
-              <h3>Et stort og voksende marked</h3>
-              <p>TAM: 43 mia. globalt marked for ukrudtsbekæmpelse. SAM: 2 mia. for økologiske og pesticidbegrænsede arealer i Europa. SOM: 17 mio. i højværdiafgrøder i Nordeuropa med realistisk 10% markedsandel.</p>
-              <p>GreenGuard adresserer et voksende behov for kemifri, præcis ukrudtskontrol med en løsning, der kombinerer lav pris, høj effektivitet og kort payback.</p>
-            </div>
-          </div>
-        </div>
-
       </div>
-
-    </section><!-- /Hvorfor os Section -->
+    </section><!-- /Mission Section -->
 
     <!-- Projekter Section -->
-    <section id="projekter" class="portfolio section">
-
-      <!-- Section Title -->
+    <section id="projekter" class="section">
       <div class="container section-title" data-aos="fade-up">
         <span class="subtitle">Projekter</span>
-        <h2>Udvalgte projekter</h2>
-        <p>To nøgleinitiativer, der viser GreenGuards kemifri tilgang og datasamarbejder.</p>
-      </div><!-- End Section Title -->
+        <h2>Projekter</h2>
+        <p>GreenGuard fokuserer på ét hovedmål: at bringe en fuldt funktionel, laserbaseret ukrudtsbekæmpelsesløsning til markedet. Vores udvikling kombinerer avanceret computer vision, selv-superviseret læring, robotics og højpræcisions-laserteknologi.</p>
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-5">
-
-          <div class="col-lg-6">
-            <article class="portfolio-card">
-              <div class="project-visual">
-                <img src="assets/img/portfolio/laser-system-1.0.png" alt="Laser ukrudtsbekæmpelse prototype" class="img-fluid" loading="lazy">
-              </div>
-              <div class="project-details">
-                <div class="project-header">
-                  <span class="project-category">Laser ukrudtsbekæmpelse</span>
-                  <time class="project-year">2025</time>
-                </div>
-                <h3 class="project-title">Hovedprojekt</h3>
-                <p class="project-description">Traktormonteret lasersystem med selv-superviseret vision, der fjerner ukrudt uden kemi og uden manuelt arbejde.</p>
-              </div>
-            </article>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="h5 mb-2">Laserbaseret ukrudtskontrol</div>
+            <p class="mb-0">Kernen i vores løsning: præcis neutralisering af ukrudt uden kemikalier, millimeter for millimeter.</p>
           </div>
-
-          <div class="col-lg-6">
-            <article class="portfolio-card">
-              <div class="project-visual">
-                <img src="assets/img/portfolio/laser-traktor.png" alt="Satelitbaseret feltoptimering setup" class="img-fluid" loading="lazy">
-              </div>
-              <div class="project-details">
-                <div class="project-header">
-                  <span class="project-category">Wheat Pressure Optimization</span>
-                  <time class="project-year">2025</time>
-                </div>
-                <h3 class="project-title">Satelitbaseret feltoptimering</h3>
-                <p class="project-description">Feltoptimering med satellitdata og computer vision, der identificerer ukrudtspres og prioriterer laserindsats.</p>
-              </div>
-            </article>
+          <div class="col-md-4">
+            <div class="h5 mb-2">Vision + AI</div>
+            <p class="mb-0">Et selv-superviseret system der kontinuerligt forbedrer sig og trænes direkte i marken.</p>
           </div>
-
+          <div class="col-md-4">
+            <div class="h5 mb-2">Markdata og fremtidig optimering</div>
+            <p class="mb-0">Udnyttelse af satellit- og arealdata til at planlægge optimale ruter og arbejdsstrømme.</p>
+          </div>
         </div>
 
-        <div class="portfolio-conclusion" data-aos="fade-up" data-aos-delay="300">
-          <div class="conclusion-content">
-            <h4>Klar til kemifri ukrudtsbekæmpelse?</h4>
-            <p>Lad os tale om, hvordan GreenGuard kan implementeres i dine marker og reducere behovet for pesticider.</p>
-            <div class="conclusion-actions">
-              <a href="#kontakt" class="primary-action">
-                Kontakt os
-                <i class="bi bi-arrow-right"></i>
-              </a>
-              <a href="#projekter" class="secondary-action">
-                Se flere projekter
-              </a>
+        <div class="row justify-content-center mt-4">
+          <div class="col-lg-10 text-center">
+            <p class="mb-0">Vi eksekverer hurtigt, tester konstant og arbejder målrettet mod et produkt, der kan skaleres på tværs af Nordeuropa.</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+          <div class="col-lg-10">
+            <div class="text-center rounded shadow overflow-hidden">
+              <img src="assets/animations/www_Pretendotype-1.1.gif" alt="GreenGuard laser- og visionprojekt" class="img-fluid">
             </div>
           </div>
         </div>
-
       </div>
-
     </section><!-- /Projekter Section -->
+
+    <!-- Problem Section -->
+    <!-- Hidden for simplified layout
+    <section id="problem" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Problem</span>
+        <h2>Ukrudt koster udbytte, arbejdskraft og miljø</h2>
+        <p>Ukrudt reducerer udbyttet markant. Pesticidregler strammer til. Arbejdskraft er dyr og knap.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <p class="lead">Ukrudt koster udbytte, pesticidkrav strammer til, og manuel lugning er dyr.</p>
+            <p class="mb-0">Landmænd mangler en kemifri løsning, der frigør tid og beskytter både afgrøder og grundvand.</p>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          ...
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- Løsning Section -->
+    <!-- Hidden for simplified layout
+    <section id="loesning" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Løsning</span>
+        <h2>Laserbaseret ukrudtsbekæmpelse</h2>
+        <p>Traktormonteret, kemifri laserløsning guidet af selv-superviseret vision. Kort fortalt: høj præcision, lavt arbejdstræk.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="solution-gif text-center my-4">
+          <img src="assets/animations/www_Pretendotype-1.1.gif" alt="GreenGuard miljø- og produktdemonstration" class="img-fluid rounded shadow">
+        </div>
+        <div class="row gy-5">
+          ...
+        </div>
+      </div>
+    </section>
+    -->
+
+    
+
+    <!-- <section id="projekter" class="portfolio section">
+      Hidden for simplified version; may be re-enabled later
+    </section> -->
 
     <!-- Team Section -->
     <section id="team" class="team section">
@@ -507,11 +314,11 @@
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/person/Benjamin-Tvorup-1.0.png" class="img-fluid" alt="CTO &amp; Co-Founder – M.Sc. Mechanical Engineering" loading="lazy">
+                <img src="assets/img/person/Benjamin-Tvorup-1.0.png" class="img-fluid" alt="CEO &amp; Co-Founder – M.Sc. Mechanical Engineering" loading="lazy">
               </div>
               <div class="member-info">
                 <h4>Benjamin Tvorup</h4>
-                <span>CTO &amp; Co-Founder</span>
+                <span>CEO &amp; Co-Founder</span>
                 <p>M.Sc. Mechanical Engineering. Driver udvikling af optik, laserstyring og systemintegration på traktoren.</p>
               </div>
             </div>
@@ -520,11 +327,11 @@
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="250">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/person/Thomas-Bjerrum-1.0.png" class="img-fluid" alt="CEO &amp; Co-Founder – M.Sc. Mechanical Engineering" loading="lazy">
+                <img src="assets/img/person/Thomas-Bjerrum-1.1.jpg" class="img-fluid" alt="CTO &amp; Co-Founder – M.Sc. Mechanical Engineering" loading="lazy">
               </div>
               <div class="member-info">
                 <h4>Thomas Bjerrum</h4>
-                <span>CEO &amp; Co-Founder</span>
+                <span>CTO &amp; Co-Founder</span>
                 <p>M.Sc. Mechanical Engineering. Ansvarlig for kommerciel strategi, pilotprojekter og partnerskaber.</p>
               </div>
             </div>
@@ -545,13 +352,13 @@
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="350">
             <div class="team-member">
-              <div class="member-img d-flex align-items-center justify-content-center bg-light" style="height: 240px;">
-                <i class="bi bi-person-circle fs-1 text-secondary"></i>
+              <div class="member-img">
+                <img src="assets/img/person/Thue-Tonnesen-1.0.JPG" class="img-fluid" alt="Lead Computer Vision" loading="lazy">
               </div>
               <div class="member-info">
                 <h4>Thue Tonnesen</h4>
-                <span>Lead Computer Vision</span>
-                <p>Ansvarlig for selv-superviseret computer vision med fokus på 98%+ præcision i ukrudtsdetektion og modellering i marken.</p>
+                <span>Systems &amp; Operations</span>
+                <p>B.Sc. Mechanical Engineering. Driver den interne tech-infrastruktur og optimerer systemer.</p>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -561,56 +368,6 @@
       </div>
 
     </section><!-- /Team Section -->
-
-    <!-- Partners Section -->
-    <section id="partnerskab" class="section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <span class="subtitle">Partnerskab</span>
-        <h2>Samarbejdspartnere &amp; investorer</h2>
-        <p>GreenGuard er støttet af stærke partnere, fonde og innovationsmiljøer, der gør det muligt at udvikle fremtidens kemifrie ukrudtsbekæmpelse.</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="mb-5">
-          <h3 class="h5 fw-semibold mb-3">Hovedpartnere &amp; investorer</h3>
-          <div class="row justify-content-center text-center g-3 g-md-4 align-items-center">
-            <div class="col-10 col-sm-8 col-md-5 col-lg-4">
-              <a href="https://www.spaceventures.dk/esabic" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-lg support-logo-esa-card">
-                <img src="assets/img/support/support-ESA-logo-1.1.png" alt="ESA BIC logo" class="img-fluid support-logo-esa">
-              </a>
-            </div>
-            <div class="col-10 col-sm-8 col-md-5 col-lg-4">
-              <a href="https://innovationsfonden.dk/da" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-lg">
-                <img src="assets/img/support/support-Innovationsfonden_Logo-1.0.png" alt="Innovationsfonden logo" class="img-fluid">
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h3 class="h5 fw-semibold mb-3">Støttet af</h3>
-          <div class="row justify-content-center text-center g-3 g-md-4 align-items-center">
-            <div class="col-6 col-md-4 col-lg-3">
-              <a href="https://agrifoodture.com/" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-sm">
-                <img src="assets/img/support/support-AgriFoodTure_logo-1.0.png" alt="AgriFoodTure logo" class="img-fluid">
-              </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-              <a href="https://www.odenserobotics.dk/" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-sm">
-                <img src="assets/img/support/support-odense-robotics-logo_1.1.png" alt="Odense Robotics logo" class="img-fluid">
-              </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-              <a href="https://mikrolegat.ffefonden.dk/" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-sm">
-                <img src="assets/img/support/support-mikrolegat-logo-1.1.png" alt="Mikrolegat logo" class="img-fluid">
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- /Partners Section -->
 
     <!-- Contact Section -->
     <section id="kontakt" class="contact section light-background">
@@ -735,6 +492,71 @@
       </div>
 
     </section><!-- /Contact Section -->
+
+    <!-- Partners Section -->
+    <section id="partnerskab" class="section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Partnerskab</span>
+        <h2>Samarbejdspartnere &amp; investorer</h2>
+        <p>GreenGuard er støttet af stærke partnere, fonde og innovationsmiljøer.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="mb-5">
+          <h3 class="h5 fw-semibold mb-3">Hovedpartnere &amp; investorer</h3>
+          <div class="row justify-content-center text-center g-3 g-md-4 align-items-center">
+            <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+              <a href="https://www.spaceventures.dk/esabic" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-lg support-logo-esa-card">
+                <img src="assets/img/support/support-ESA-logo-1.1.png" alt="ESA BIC logo" class="img-fluid support-logo-esa">
+              </a>
+            </div>
+            <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+              <a href="https://innovationsfonden.dk/da" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-lg">
+                <img src="assets/img/support/support-Innovationsfonden_Logo-1.0.png" alt="Innovationsfonden logo" class="img-fluid">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="h5 fw-semibold mb-3">Støttet af</h3>
+          <div class="row justify-content-center text-center g-3 g-md-4 align-items-center">
+            <!-- <div class="col-6 col-md-4 col-lg-3">
+              <a href="https://agrifoodture.com/" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-sm">
+                <img src="assets/img/support/support-AgriFoodTure_logo-1.0.png" alt="AgriFoodTure logo" class="img-fluid">
+              </a>
+            </div> -->
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="https://www.odenserobotics.dk/" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-sm">
+                <img src="assets/img/support/support-odense-robotics-logo_1.1.png" alt="Odense Robotics logo" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="https://mikrolegat.ffefonden.dk/" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-sm">
+                <img src="assets/img/support/support-mikrolegat-logo-1.1.png" alt="Mikrolegat logo" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="https://thekitchen.io/" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-sm">
+                <img src="assets/img/support/support-thekitchen-logo_1.0.png" alt="The Kitchen logo" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="https://www.danskindustri.dk/om-di/hvad-er-di/di-fonde/alexander-foss/" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-sm">
+                <img src="assets/img/support/support-AlexanderFoss-logo_1.0.png" alt="Alexander Foss Fonden logo" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="https://ottobruunsfond.dk/" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-sm">
+                <img src="assets/img/support/support-OttoBruuns-Logo_1.0.png" alt="Otto Bruuns Fond logo" class="img-fluid">
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Partners Section -->
 
   </main>
 

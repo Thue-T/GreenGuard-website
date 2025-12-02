@@ -222,6 +222,42 @@
     let activeMilestone = null;
     let isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
+    function getDetailBoxCenterInSvg() {
+      const boxRect = detailBox.getBoundingClientRect();
+      const point = svg.createSVGPoint();
+      point.x = boxRect.left + boxRect.width / 2;
+      point.y = boxRect.top + boxRect.height / 2;
+      const ctm = svg.getScreenCTM();
+      if (!ctm) return { x: 0, y: 0 };
+      const svgPoint = point.matrixTransform(ctm.inverse());
+      return { x: svgPoint.x, y: svgPoint.y };
+    }
+
+    function getConnectorGeometry(milestone) {
+      const circle = milestone.querySelector('circle');
+      if (!circle) return null;
+
+      const startX = parseFloat(circle.getAttribute('cx'));
+      const startY = parseFloat(circle.getAttribute('cy'));
+      const { x: endX, y: endY } = getDetailBoxCenterInSvg();
+
+      const dx = endX - startX;
+      const dy = endY - startY;
+      const length = Math.sqrt(dx * dx + dy * dy);
+
+      return { startX, startY, endX, endY, length };
+    }
+
+    function applyConnectorGeometry(connector, geometry) {
+      if (!geometry) return;
+      connector.setAttribute('x1', geometry.startX);
+      connector.setAttribute('y1', geometry.startY);
+      connector.setAttribute('x2', geometry.endX);
+      connector.setAttribute('y2', geometry.endY);
+      connector.setAttribute('stroke-dasharray', geometry.length);
+      connector.setAttribute('stroke-dashoffset', geometry.length);
+    }
+
     function deactivateAllMilestones() {
       if (activeMilestone) {
         activeMilestone.milestone.classList.remove('active');
@@ -249,36 +285,16 @@
       detailText.textContent = milestone.dataset.text || '';
 
       // --- 2. Calculations ---
-      const svgRect = svg.getBoundingClientRect();
-      const circleRect = circle.getBoundingClientRect();
-
-      // Start of connector line (center of circle)
-      const startX = parseFloat(circle.getAttribute('cx'));
-      const startY = parseFloat(circle.getAttribute('cy'));
-
-      // End of connector line (top-center of the detail box)
-      // The detail box will be horizontally centered, so its center is the SVG's center
-      const detailBoxTop = svgRect.bottom - svgRect.top + 20; // Position below SVG + margin
-      const endX = svg.viewBox.baseVal.width / 2;
-      const endY = detailBoxTop;
-
-      // Calculate line length for animation
-      const dx = endX - startX;
-      const dy = endY - startY;
-      const length = Math.sqrt(dx * dx + dy * dy);
+      const geometry = getConnectorGeometry(milestone);
 
       // --- 3. Update Connector ---
-      connector.setAttribute('x1', startX);
-      connector.setAttribute('y1', startY);
-      connector.setAttribute('x2', endX);
-      connector.setAttribute('y2', endY);
-      connector.setAttribute('stroke-dasharray', length);
-      connector.setAttribute('stroke-dashoffset', length);
-      
+      applyConnectorGeometry(connector, geometry);
+
       // --- 4. Calculate Detail Box "Emerge" Translation ---
-      // This gives the illusion of emerging from the milestone
-      const emergeTranslateX = (startX - endX) * 0.15; // Move slightly from the direction of the milestone
-      detailBox.style.setProperty('--translate-x', `${emergeTranslateX}px`);
+      if (geometry) {
+        const emergeTranslateX = (geometry.startX - geometry.endX) * 0.15; // Move slightly from the direction of the milestone
+        detailBox.style.setProperty('--translate-x', `${emergeTranslateX}px`);
+      }
 
       // --- 5. Activate Animations ---
       // We need a tiny delay to ensure CSS transitions apply correctly after properties are set
@@ -287,8 +303,13 @@
         connector.classList.add('active');
         detailWrapper.classList.add('active');
         detailBox.classList.add('active');
+        applyConnectorGeometry(connector, getConnectorGeometry(milestone));
         activeMilestone = { milestone, connector };
       }, 10);
+
+      requestAnimationFrame(() => {
+        applyConnectorGeometry(connector, getConnectorGeometry(milestone));
+      });
     }
 
     // --- 6. Event Listeners ---
@@ -320,6 +341,13 @@
     } else {
       roadmapContainer.addEventListener('mouseleave', () => deactivateAllMilestones());
     }
+
+    window.addEventListener('resize', () => {
+      if (activeMilestone) {
+        const { milestone, connector } = activeMilestone;
+        applyConnectorGeometry(connector, getConnectorGeometry(milestone));
+      }
+    });
   });
 
 })();
