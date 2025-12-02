@@ -5,8 +5,10 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>GreenGuard Automation | Laser Weed Control</title>
-  <meta name="description" content="Empowering farmers to grow crops more affordably and sustainably with tractor-mounted, computer-vision guided laser weed control.">
-  <meta name="keywords" content="GreenGuard Automation, laser weed control, sustainable farming, computer vision agriculture">
+  <meta name="description"
+    content="Empowering farmers to grow crops more affordably and sustainably with tractor-mounted, computer-vision guided laser weed control.">
+  <meta name="keywords"
+    content="GreenGuard Automation, laser weed control, sustainable farming, computer vision agriculture">
 
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="assets/img/brand/GGA_Logo-1.0.svg">
@@ -16,7 +18,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -57,7 +61,7 @@
           <li><a href="#team">Team</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
           <li><a href="#partnerskab">Partnerskab</a></li>
-          
+
           <!--
           <li class="dropdown"><a href="#"><span>Mere</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -94,16 +98,26 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="hero-content">
-              <h1 data-aos="fade-up" data-aos-delay="200">Kemifri præcisionsukrudtsbekæmpelse</h1>
-              <p data-aos="fade-up" data-aos-delay="300">Vi gør det muligt for landmænd at dyrke mere bæredygtigt og langt mere omkostningseffektivt.</p>
-              <div class="d-flex gap-2 flex-wrap my-3" data-aos="fade-up" data-aos-delay="350">
-                <span class="badge rounded-pill px-3 py-2" style="background:#e1e3de;color:#000;">Kemifri</span>
-                <span class="badge rounded-pill px-3 py-2" style="background:#e1e3de;color:#000;">Høj præcision</span>
-                <span class="badge rounded-pill px-3 py-2" style="background:#e1e3de;color:#000;">Lavere omkostninger</span>
+              <h1 data-aos="fade-up" data-aos-delay="200">Kemifri præcisions&shy;ukrudtsbekæmpelse</h1>
+              <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">Vi gør det muligt for landmænd at dyrke
+                mere bæredygtigt og langt mere omkostningseffektivt.</p>
+
+              <div class="d-flex gap-2 flex-wrap my-4" data-aos="fade-up" data-aos-delay="350">
+                <span class="badge-custom"><i class="bi bi-check-circle-fill me-1"></i> Kemifri</span>
+                <span class="badge-custom"><i class="bi bi-check-circle-fill me-1"></i> Høj præcision</span>
+                <span class="badge-custom"><i class="bi bi-check-circle-fill me-1"></i> Lavere omkostninger</span>
               </div>
-              <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
-                <a href="#kontakt" class="btn-primary">Kontakt os</a>
+
+              <div class="hero-cta d-flex gap-3" data-aos="fade-up" data-aos-delay="400">
+                <a href="#kontakt" class="btn-get-started">Kontakt os</a>
+                <a href="#projekter" class="btn-watch-video d-flex align-items-center"><i
+                    class="bi bi-play-circle"></i><span>Se teknologien</span></a>
               </div>
+            </div>
+          </div>
+          <div class="col-lg-6 hero-image" data-aos="zoom-out" data-aos-delay="300">
+            <div class="hero-canvas-container">
+              <canvas id="heroCanvas"></canvas>
             </div>
           </div>
         </div>
@@ -140,71 +154,139 @@
 
         <div class="row justify-content-center mb-4">
           <div class="col-lg-10 text-center">
-            <p class="lead mb-3">Vi udvikler næste generation af kemifri, præcis og omkostningseffektiv ukrudtsbekæmpelse til højværdiafgrøder. GreenGuard drives af et kompromisløst fokus på eksekvering, teknologisk innovation og hurtig iteration mod et markedsklart produkt.</p>
+            <p class="lead mb-3">Vi udvikler næste generation af kemifri, præcis og omkostningseffektiv
+              ukrudtsbekæmpelse til højværdiafgrøder. GreenGuard drives af et kompromisløst fokus på eksekvering,
+              teknologisk innovation og hurtig iteration mod et markedsklart produkt.</p>
             <p class="mb-1">Præcision gennem avanceret vision og laserintegration.</p>
             <p class="mb-0">Hurtig udvikling, højt ambitionsniveau og dyb teknisk forståelse.</p>
           </div>
         </div>
 
-        <div class="gg-roadmap-container mt-4" data-aos="fade-up" data-aos-delay="150">
-          <svg class="gg-roadmap-svg" width="100%" viewBox="0 0 1300 360" role="img" aria-label="GreenGuard roadmap 2025-2027">
-            <line x1="30" y1="150" x2="1260" y2="150" stroke="#4A5568" stroke-width="4" />
+        <div class="gg-roadmap-container mt-5" data-aos="fade-up" data-aos-delay="150">
+          <div class="roadmap-vertical">
+            <div class="roadmap-line"></div>
 
-            <g class="milestone" id="ms1" data-title="Prototypeudvikling" data-text="Bygger og tester den første fuldt funktionelle laser- og visionsprototype (TRL4)." style="cursor:pointer">
-              <circle cx="90" cy="150" r="18" fill="#fff" stroke="#4A5568" stroke-width="3" />
-              <line class="connector" x1="90" y1="150" x2="90" y2="150" stroke="#4A5568" stroke-width="2" opacity="0" />
-              <text x="90" y="95" text-anchor="middle" class="ms-label-desktop ms-date">Q4 2025</text>
-              <text x="90" y="118" text-anchor="middle" class="ms-label-desktop ms-title">Prototypeudvikling</text>
-              <text x="90" y="105" text-anchor="middle" class="ms-label-mobile">Q4 25</text>
-            </g>
-
-            <g class="milestone" id="ms2" data-title="Feltforsøg" data-text="Validerer performance i virkelige markforhold hos landmænd." style="cursor:pointer">
-              <circle cx="300" cy="150" r="18" fill="#fff" stroke="#4A5568" stroke-width="3" />
-              <line class="connector" x1="300" y1="150" x2="300" y2="150" stroke="#4A5568" stroke-width="2" opacity="0" />
-              <text x="300" y="95" text-anchor="middle" class="ms-label-desktop ms-date">Q2 2026</text>
-              <text x="300" y="118" text-anchor="middle" class="ms-label-desktop ms-title">Feltforsøg</text>
-              <text x="300" y="105" text-anchor="middle" class="ms-label-mobile">Q2 26</text>
-            </g>
-
-            <g class="milestone" id="ms3" data-title="Soft Funding" data-text="NRGI, ESA BIC, AgriFoodTure m.fl. bidrager med soft funding til udvikling." style="cursor:pointer">
-              <circle cx="510" cy="150" r="18" fill="#fff" stroke="#4A5568" stroke-width="3" />
-              <line class="connector" x1="510" y1="150" x2="510" y2="150" stroke="#4A5568" stroke-width="2" opacity="0" />
-              <text x="510" y="95" text-anchor="middle" class="ms-label-desktop ms-date">Q3 2026</text>
-              <text x="510" y="118" text-anchor="middle" class="ms-label-desktop ms-title">Soft Funding</text>
-              <text x="510" y="105" text-anchor="middle" class="ms-label-mobile">Q3 26</text>
-            </g>
-
-            <g class="milestone" id="ms4" data-title="Investorer" data-text="Private investorer kommer ind for at skalere hardware, produktion ogteam." style="cursor:pointer">
-              <circle cx="720" cy="150" r="18" fill="#fff" stroke="#4A5568" stroke-width="3" />
-              <line class="connector" x1="720" y1="150" x2="720" y2="150" stroke="#4A5568" stroke-width="2" opacity="0" />
-              <text x="720" y="95" text-anchor="middle" class="ms-label-desktop ms-date">Q4 2026</text>
-              <text x="720" y="118" text-anchor="middle" class="ms-label-desktop ms-title">Investorer</text>
-              <text x="720" y="105" text-anchor="middle" class="ms-label-mobile">Q4 26</text>
-            </g>
-
-            <g class="milestone" id="ms5" data-title="Pilotprojekter i stor skala" data-text="Demonstrerer impact hos flere partnere og på forskellige afgrøder." style="cursor:pointer">
-              <circle cx="930" cy="150" r="18" fill="#fff" stroke="#4A5568" stroke-width="3" />
-              <line class="connector" x1="930" y1="150" x2="930" y2="150" stroke="#4A5568" stroke-width="2" opacity="0" />
-              <text x="930" y="95" text-anchor="middle" class="ms-label-desktop ms-date">Q2 2027</text>
-              <text x="930" y="118" text-anchor="middle" class="ms-label-desktop ms-title">Pilotprojekter i stor skala</text>
-              <text x="930" y="105" text-anchor="middle" class="ms-label-mobile">Q2 27</text>
-            </g>
-
-            <g class="milestone" id="ms6" data-title="Kommercialisering" data-text="Lancering i markedet og skalering i Nordeuropa." style="cursor:pointer">
-              <circle cx="1140" cy="150" r="18" fill="#fff" stroke="#4A5568" stroke-width="3" />
-              <line class="connector" x1="1140" y1="150" x2="1140" y2="150" stroke="#4A5568" stroke-width="2" opacity="0" />
-              <text x="1140" y="95" text-anchor="middle" class="ms-label-desktop ms-date">Q4 2027</text>
-              <text x="1140" y="118" text-anchor="middle" class="ms-label-desktop ms-title">Kommercialisering</text>
-              <text x="1140" y="105" text-anchor="middle" class="ms-label-mobile">Q4 27</text>
-            </g>
-          </svg>
-          <div id="roadmap-detail-wrapper">
-            <div id="roadmap-detail-box" class="roadmap-detail-box mt-3">
-              <div class="roadmap-detail-inner">
-                <h5 id="roadmap-detail-title" class="mb-2"></h5>
-                <p id="roadmap-detail-text" class="mb-0"></p>
+            <!-- Milestone 1: Q4 2025 -->
+            <div class="roadmap-item current">
+              <div class="roadmap-marker">
+                <div class="marker-circle">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z">
+                    </path>
+                    <path d="M9 21h6"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="roadmap-content">
+                <span class="roadmap-date">Q4 2025</span>
+                <h4 class="roadmap-title">Prototypeudvikling</h4>
+                <p class="roadmap-desc">Bygger og tester den første fuldt funktionelle laser- og visionsprototype
+                  (TRL4).</p>
               </div>
             </div>
+
+            <!-- Milestone 2: Q2 2026 -->
+            <div class="roadmap-item">
+              <div class="roadmap-marker">
+                <div class="marker-circle">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                    <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                    <path d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="roadmap-content">
+                <span class="roadmap-date">Q2 2026</span>
+                <h4 class="roadmap-title">Feltforsøg</h4>
+                <p class="roadmap-desc">Validerer performance i virkelige markforhold hos landmænd.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 3: Q3 2026 -->
+            <div class="roadmap-item">
+              <div class="roadmap-marker">
+                <div class="marker-circle">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                    <path d="M12 3v6"></path>
+                    <path d="M12 15v6"></path>
+                    <path d="M3 12h6"></path>
+                    <path d="M15 12h6"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="roadmap-content">
+                <span class="roadmap-date">Q3 2026</span>
+                <h4 class="roadmap-title">Soft Funding</h4>
+                <p class="roadmap-desc">NRGI, ESA BIC, AgriFoodTure m.fl. bidrager med soft funding til udvikling.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 4: Q4 2026 -->
+            <div class="roadmap-item">
+              <div class="roadmap-marker">
+                <div class="marker-circle">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12">
+                    </path>
+                    <path d="M20 12v4h-4a2 2 0 0 1 0 -4h4"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="roadmap-content">
+                <span class="roadmap-date">Q4 2026</span>
+                <h4 class="roadmap-title">Investorer</h4>
+                <p class="roadmap-desc">Private investorer kommer ind for at skalere hardware, produktion og team.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 5: Q2 2027 -->
+            <div class="roadmap-item">
+              <div class="roadmap-marker">
+                <div class="marker-circle">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 10h3v-3l-3.5 -3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1 -3 3l-6 -6a6 6 0 0 1 -8 -8l3.5 3.5">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+              <div class="roadmap-content">
+                <span class="roadmap-date">Q2 2027</span>
+                <h4 class="roadmap-title">Pilotprojekter i stor skala</h4>
+                <p class="roadmap-desc">Demonstrerer impact hos flere partnere og på forskellige afgrøder.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 6: Q4 2027 -->
+            <div class="roadmap-item">
+              <div class="roadmap-marker">
+                <div class="marker-circle">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3">
+                    </path>
+                    <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3"></path>
+                    <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="roadmap-content">
+                <span class="roadmap-date">Q4 2027</span>
+                <h4 class="roadmap-title">Kommercialisering</h4>
+                <p class="roadmap-desc">Lancering i markedet og skalering i Nordeuropa.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -215,35 +297,39 @@
       <div class="container section-title" data-aos="fade-up">
         <span class="subtitle">Projekter</span>
         <h2>Projekter</h2>
-        <p>GreenGuard fokuserer på ét hovedmål: at bringe en fuldt funktionel, laserbaseret ukrudtsbekæmpelsesløsning til markedet. Vores udvikling kombinerer avanceret computer vision, selv-superviseret læring, robotics og højpræcisions-laserteknologi.</p>
+        <p>GreenGuard fokuserer på ét hovedmål: at bringe en fuldt funktionel, laserbaseret ukrudtsbekæmpelsesløsning
+          til markedet. Vores udvikling kombinerer avanceret computer vision, selv-superviseret læring, robotics og
+          højpræcisions-laserteknologi.</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row g-4">
           <div class="col-md-4">
             <div class="h5 mb-2">Laserbaseret ukrudtskontrol</div>
-            <p class="mb-0">Kernen i vores løsning: præcis neutralisering af ukrudt uden kemikalier, millimeter for millimeter.</p>
+            <p class="mb-0">Præcis neutralisering uden kemikalier.</p>
           </div>
           <div class="col-md-4">
-            <div class="h5 mb-2">Vision + AI</div>
-            <p class="mb-0">Et selv-superviseret system der kontinuerligt forbedrer sig og trænes direkte i marken.</p>
+            <div class="h5 mb-2">Vision & AI</div>
+            <p class="mb-0">Systemet forbedrer sig løbende via selv-superviseret læring i marken.</p>
           </div>
           <div class="col-md-4">
-            <div class="h5 mb-2">Markdata og fremtidig optimering</div>
-            <p class="mb-0">Udnyttelse af satellit- og arealdata til at planlægge optimale ruter og arbejdsstrømme.</p>
+            <div class="h5 mb-2">Markdata-optimering</div>
+            <p class="mb-0">Udnyttelse af satellit- og arealdata til planlægning.</p>
           </div>
         </div>
 
         <div class="row justify-content-center mt-4">
           <div class="col-lg-10 text-center">
-            <p class="mb-0">Vi eksekverer hurtigt, tester konstant og arbejder målrettet mod et produkt, der kan skaleres på tværs af Nordeuropa.</p>
+            <p class="mb-0">Vi eksekverer hurtigt, tester konstant og arbejder målrettet mod et produkt, der kan
+              skaleres på tværs af Nordeuropa.</p>
           </div>
         </div>
 
         <div class="row justify-content-center mt-4">
           <div class="col-lg-10">
             <div class="text-center rounded shadow overflow-hidden">
-              <img src="assets/animations/www_Pretendotype-1.1.gif" alt="GreenGuard laser- og visionprojekt" class="img-fluid">
+              <img src="assets/animations/www_Pretendotype-1.1.gif" alt="GreenGuard laser- og visionprojekt"
+                class="img-fluid">
             </div>
           </div>
         </div>
@@ -291,7 +377,7 @@
     </section>
     -->
 
-    
+
 
     <!-- <section id="projekter" class="portfolio section">
       Hidden for simplified version; may be re-enabled later
@@ -304,7 +390,8 @@
       <div class="container section-title" data-aos="fade-up">
         <span class="subtitle">Teamet</span>
         <h2>Ingeniørerne bag GreenGuard</h2>
-        <p>Fire ingeniører med dyb erfaring i mekanik, optik, robotik og computer vision bygger Europas første traktormonterede lasersystem til ukrudtsbekæmpelse.</p>
+        <p>Fire ingeniører med dyb erfaring i mekanik, optik, robotik og computer vision bygger Europas første
+          traktormonterede lasersystem til ukrudtsbekæmpelse.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -314,12 +401,14 @@
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/person/Benjamin-Tvorup-1.0.png" class="img-fluid" alt="CEO &amp; Co-Founder – M.Sc. Mechanical Engineering" loading="lazy">
+                <img src="assets/img/person/Benjamin-Tvorup-1.0.png" class="img-fluid"
+                  alt="CEO &amp; Co-Founder – M.Sc. Mechanical Engineering" loading="lazy">
               </div>
               <div class="member-info">
                 <h4>Benjamin Tvorup</h4>
                 <span>CEO &amp; Co-Founder</span>
-                <p>M.Sc. Mechanical Engineering. Driver udvikling af optik, laserstyring og systemintegration på traktoren.</p>
+                <p>M.Sc. Mechanical Engineering. Driver udvikling af optik, laserstyring og systemintegration på
+                  traktoren.</p>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -327,7 +416,8 @@
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="250">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/person/Thomas-Bjerrum-1.1.jpg" class="img-fluid" alt="CTO &amp; Co-Founder – M.Sc. Mechanical Engineering" loading="lazy">
+                <img src="assets/img/person/Thomas-Bjerrum-1.1.jpg" class="img-fluid"
+                  alt="CTO &amp; Co-Founder – M.Sc. Mechanical Engineering" loading="lazy">
               </div>
               <div class="member-info">
                 <h4>Thomas Bjerrum</h4>
@@ -340,7 +430,8 @@
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/person/Christian-Dragkilde-1.0.png" class="img-fluid" alt="Lead Prototyping – M.Sc. Mechanical Engineering, Member of DISCO" loading="lazy">
+                <img src="assets/img/person/Christian-Dragkilde-1.0.png" class="img-fluid"
+                  alt="Lead Prototyping – M.Sc. Mechanical Engineering, Member of DISCO" loading="lazy">
               </div>
               <div class="member-info">
                 <h4>Christian Dragkilde</h4>
@@ -353,7 +444,8 @@
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="350">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/person/Thue-Tonnesen-1.0.JPG" class="img-fluid" alt="Lead Computer Vision" loading="lazy">
+                <img src="assets/img/person/Thue-Tonnesen-1.0.JPG" class="img-fluid" alt="Lead Computer Vision"
+                  loading="lazy">
               </div>
               <div class="member-info">
                 <h4>Thue Tonnesen</h4>
@@ -430,7 +522,8 @@
                 </div>
                 <div class="detail-content">
                   <span class="detail-label">Adresse</span>
-                  <span class="detail-value"><strong>Firmaadresse:</strong> Langelandsgade 209, 1. th<br>8200 Aarhus N<br><strong>Kontoradresse:</strong> Universitetsbyen 14<br>8000 Aarhus</span>
+                  <span class="detail-value"><strong>Firmaadresse:</strong> Langelandsgade 209, 1. th<br>8200 Aarhus
+                    N<br><strong>Kontoradresse:</strong> Universitetsbyen 14<br>8000 Aarhus</span>
                 </div>
               </div>
 
@@ -507,13 +600,17 @@
           <h3 class="h5 fw-semibold mb-3">Hovedpartnere &amp; investorer</h3>
           <div class="row justify-content-center text-center g-3 g-md-4 align-items-center">
             <div class="col-10 col-sm-8 col-md-5 col-lg-4">
-              <a href="https://www.spaceventures.dk/esabic" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-lg support-logo-esa-card">
-                <img src="assets/img/support/support-ESA-logo-1.1.png" alt="ESA BIC logo" class="img-fluid support-logo-esa">
+              <a href="https://www.spaceventures.dk/esabic" target="_blank" rel="noopener noreferrer"
+                class="support-logo-card support-logo-lg support-logo-esa-card">
+                <img src="assets/img/support/support-ESA-logo-1.1.png" alt="ESA BIC logo"
+                  class="img-fluid support-logo-esa">
               </a>
             </div>
             <div class="col-10 col-sm-8 col-md-5 col-lg-4">
-              <a href="https://innovationsfonden.dk/da" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-lg">
-                <img src="assets/img/support/support-Innovationsfonden_Logo-1.0.png" alt="Innovationsfonden logo" class="img-fluid">
+              <a href="https://innovationsfonden.dk/da" target="_blank" rel="noopener noreferrer"
+                class="support-logo-card support-logo-lg">
+                <img src="assets/img/support/support-Innovationsfonden_Logo-1.0.png" alt="Innovationsfonden logo"
+                  class="img-fluid">
               </a>
             </div>
           </div>
@@ -528,28 +625,36 @@
               </a>
             </div> -->
             <div class="col-6 col-md-4 col-lg-3">
-              <a href="https://www.odenserobotics.dk/" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-sm">
-                <img src="assets/img/support/support-odense-robotics-logo_1.1.png" alt="Odense Robotics logo" class="img-fluid">
+              <a href="https://www.odenserobotics.dk/" target="_blank" rel="noopener noreferrer"
+                class="support-logo-card support-logo-sm">
+                <img src="assets/img/support/support-odense-robotics-logo_1.1.png" alt="Odense Robotics logo"
+                  class="img-fluid">
               </a>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <a href="https://mikrolegat.ffefonden.dk/" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-sm">
+              <a href="https://mikrolegat.ffefonden.dk/" target="_blank" rel="noopener noreferrer"
+                class="support-logo-card support-logo-sm">
                 <img src="assets/img/support/support-mikrolegat-logo-1.1.png" alt="Mikrolegat logo" class="img-fluid">
               </a>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <a href="https://thekitchen.io/" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-sm">
+              <a href="https://thekitchen.io/" target="_blank" rel="noopener noreferrer"
+                class="support-logo-card support-logo-sm">
                 <img src="assets/img/support/support-thekitchen-logo_1.0.png" alt="The Kitchen logo" class="img-fluid">
               </a>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <a href="https://www.danskindustri.dk/om-di/hvad-er-di/di-fonde/alexander-foss/" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-sm">
-                <img src="assets/img/support/support-AlexanderFoss-logo_1.0.png" alt="Alexander Foss Fonden logo" class="img-fluid">
+              <a href="https://www.danskindustri.dk/om-di/hvad-er-di/di-fonde/alexander-foss/" target="_blank"
+                rel="noopener noreferrer" class="support-logo-card support-logo-sm">
+                <img src="assets/img/support/support-AlexanderFoss-logo_1.0.png" alt="Alexander Foss Fonden logo"
+                  class="img-fluid">
               </a>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <a href="https://ottobruunsfond.dk/" target="_blank" rel="noopener noreferrer" class="support-logo-card support-logo-sm">
-                <img src="assets/img/support/support-OttoBruuns-Logo_1.0.png" alt="Otto Bruuns Fond logo" class="img-fluid">
+              <a href="https://ottobruunsfond.dk/" target="_blank" rel="noopener noreferrer"
+                class="support-logo-card support-logo-sm">
+                <img src="assets/img/support/support-OttoBruuns-Logo_1.0.png" alt="Otto Bruuns Fond logo"
+                  class="img-fluid">
               </a>
             </div>
           </div>
@@ -570,7 +675,8 @@
           </a>
           <p>GreenGuard Automation udvikler laserbaseret ukrudtsbekæmpelse til bæredygtigt landbrug.</p>
           <div class="social-links d-flex mt-4">
-            <a href="https://www.linkedin.com/company/greenguard-automation/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.linkedin.com/company/greenguard-automation/" aria-label="LinkedIn"><i
+                class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
@@ -580,20 +686,15 @@
             <li><a href="#hero">Forside</a></li>
             <li><a href="#problem">Problem</a></li>
             <li><a href="#loesning">Løsning</a></li>
-            <li><a href="terms.html">Vilkår</a></li>
-            <li><a href="privacy.html">Privatliv</a></li>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#projekter">Projekter</a></li>
           </ul>
         </div>
 
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Vores løsninger</h4>
-          <ul>
-            <li><a href="#loesning">Teknisk rådgivning</a></li>
-            <li><a href="#loesning">Hardwareudvikling</a></li>
-            <li><a href="#loesning">AI &amp; Computer Vision</a></li>
-            <li><a href="#loesning">Dataanalyse &amp; Sporbarhed</a></li>
-            <li><a href="#loesning">Robotteknologi &amp; Integration</a></li>
-          </ul>
+        <div class="col-lg-2 col-6 footer-about">
+          <h4>Vores vision</h4>
+          <p class="mt-3">At revolutionere ukrudtsbekæmpelse gennem kemifri teknologi og præcision - for et mere
+            bæredygtigt og profitabelt landbrug.</p>
         </div>
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
@@ -621,7 +722,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -638,6 +740,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/hero-animation.js"></script>
 
 </body>
 

@@ -14,29 +14,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Montserrat",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Montserrat", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #666666; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #313131; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #666666;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #000000;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #313131;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #999999;  /* The default color of the main navmenu links */
-  --nav-hover-color: #000000; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #666666; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #313131; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #999999;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #000000;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #666666;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #313131;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -790,10 +802,121 @@ section,
 
 .hero .hero-content h1 {
   font-size: 3.5rem;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: var(--heading-color);
+}
+
+.hero .hero-content .hero-subtitle {
+  font-size: 1.25rem;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.hero .badge-custom {
+  background-color: #e1e3de;
+  color: #313131;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 50rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero .badge-custom i {
+  color: var(--accent-color);
+}
+
+.hero .btn-get-started {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.hero .btn-get-started:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.hero .btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  color: var(--default-color);
+  font-weight: 600;
+}
+
+.hero .btn-watch-video i {
+  color: var(--accent-color);
+  font-size: 32px;
+  transition: 0.3s;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.hero .btn-watch-video:hover {
+  color: var(--accent-color);
+}
+
+.hero .btn-watch-video:hover i {
+  color: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+.hero .hero-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.hero .hero-canvas-container {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+.hero .hero-canvas-container canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: crosshair;
+}
+
+@media (max-width: 991px) {
+  .hero .hero-content {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .hero .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .hero-content .hero-subtitle {
+    margin: 0 auto 2rem auto;
+  }
+
+  .hero .d-flex.gap-2 {
+    justify-content: center;
+  }
+
+  .hero .hero-cta {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1778,6 +1901,8 @@ section,
   transition: all 0.3s ease-in-out;
   width: 100%;
   height: auto;
+  aspect-ratio: 1 / 1.2;
+  object-fit: cover;
   filter: grayscale(100%);
 }
 
@@ -4191,115 +4316,182 @@ section,
   padding: 20px;
 }
 
-.gg-roadmap-container svg {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.milestone {
-  cursor: pointer;
-}
-
-.milestone circle {
-  transition: fill 0.3s ease, transform 0.25s ease-out;
-  transform-origin: center center;
-}
-
-.milestone:hover circle {
-  transform: scale(1.2);
-}
-
-.milestone.active circle {
-  fill: #2d3748; /* Highlight color */
-  transform: scale(1.2);
-}
-
-.connector {
-  stroke: #4A5568;
-  stroke-width: 2;
-  opacity: 0;
-  stroke-linecap: round;
-  transition: opacity 0.3s ease,
-              stroke-dashoffset 0.6s cubic-bezier(0.25, 0.9, 0.25, 1.0);
-}
-
-.connector.active {
-  opacity: 1;
-  stroke-dashoffset: 0;
-}
-
-#roadmap-detail-wrapper {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.5s cubic-bezier(0.25, 0.9, 0.25, 1.0);
-}
-
-#roadmap-detail-wrapper.active {
-  grid-template-rows: 1fr;
-}
-
-.roadmap-detail-box {
-  overflow: hidden;
-  background: var(--surface-color);
-  border: 1px solid #e9e9e9;
-  border-radius: 14px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-  width: 50%;
+/*--------------------------------------------------------------
+# Vertical Roadmap
+--------------------------------------------------------------*/
+.gg-roadmap-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 24px 28px;
-  opacity: 0;
-  transform: scale(0.3) translateY(var(--translate-y, -50px)) translateX(var(--translate-x, 0px));
-  transform-origin: 50% 0; /* Animate from top-center */
-  transition: transform 0.5s cubic-bezier(0.25, 0.9, 0.25, 1.0),
-              opacity 0.4s ease;
+  padding: 40px 0;
 }
 
-.roadmap-detail-box.active {
-  opacity: 1;
-  transform: scale(1) translateY(0) translateX(var(--translate-x, 0px));
+.roadmap-vertical {
+  position: relative;
 }
 
-.roadmap-detail-inner h5 {
-  color: var(--heading-color);
-  font-weight: 600;
+/* Vertical Line */
+.roadmap-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #e1e3de;
+  transform: translateX(-50%);
+  border-radius: 2px;
 }
 
-.roadmap-detail-inner p {
-  color: color-mix(in srgb, var(--default-color), transparent 15%);
+/* Roadmap Item */
+.roadmap-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.roadmap-item:last-child {
   margin-bottom: 0;
 }
 
-svg.gg-roadmap-svg text {
-  font-family: var(--default-font);
-  pointer-events: none;
+/* Marker */
+.roadmap-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background: var(--background-color);
+  padding: 10px 0;
 }
 
-.ms-date {
-  font-size: 14px;
-  fill: #2D3748;
+.marker-circle {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border: 3px solid #e1e3de;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #313131;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.roadmap-item.current .marker-circle,
+.roadmap-item:hover .marker-circle {
+  background: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.marker-circle svg {
+  transition: all 0.3s ease;
+}
+
+/* Content */
+.roadmap-content {
+  width: 42%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.roadmap-item:nth-child(odd) .roadmap-content {
+  margin-right: auto;
+  text-align: right;
+}
+
+.roadmap-item:nth-child(even) .roadmap-content {
+  margin-left: auto;
+  text-align: left;
+}
+
+.roadmap-item:hover .roadmap-content {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.roadmap-date {
+  display: inline-block;
+  background: #e1e3de;
+  color: #313131;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.ms-title {
-  font-size: 13px;
-  fill: #4A5568;
+.roadmap-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--heading-color);
 }
 
-.ms-label-desktop { display: block; }
-.ms-label-mobile { display: none; }
+.roadmap-desc {
+  font-size: 0.95rem;
+  color: var(--default-color);
+  margin: 0;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
 
-@media (max-width: 767px) {
-  .ms-label-desktop { display: none; }
-  .ms-label-mobile {
-    display: block;
-    fill: #2D3748;
-    font-weight: 700;
-    font-size: 16px;
+/* Expand description on hover or if current */
+.roadmap-item:hover .roadmap-desc,
+.roadmap-item.current .roadmap-desc {
+  max-height: 100px;
+  /* Adjust as needed */
+  opacity: 1;
+  margin-top: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .roadmap-line {
+    left: 30px;
   }
-  .gg-roadmap-svg circle { r: 22; }
-  .roadmap-detail-box {
-    width: 100%;
+
+  .roadmap-marker {
+    left: 30px;
+  }
+
+  .marker-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .marker-circle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .roadmap-content {
+    width: calc(100% - 80px);
+    margin-left: 80px !important;
+    /* Force left margin */
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
+
+  /* Always show description on mobile for better UX, or keep tap interaction */
+  .roadmap-desc {
+    max-height: none;
+    opacity: 1;
+    margin-top: 10px;
   }
 }
 
